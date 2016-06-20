@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>AnotherOpening</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <%= link_to 'home', root_path %>
+    <% if logged_in? %>
+    <ul>
+      <li>welcome, <%= link_to current_user.username, user_path(current_user) %></li>
+      <li><%= link_to 'log out', logout_path, method: "delete" %></li>
+      <li>
+        <%= form_tag(searches_path, method: 'get', class: 'navbar-form navbar-right') do %>
+          <%= search_field_tag 'search', nil, class: 'form-control', placeholder: 'Search'  %>
+          <%= submit_tag "Submit", class: 'btn btn-default', :name => nil %>
+        <% end %>
+      </li>
+    </ul>
+    <% else %>
+      <li><%= link_to 'sign up', new_user_path %></li>
+      <li><%= link_to 'login', login_path %></li>
+       <li>
+        <%= form_tag(searches_path, method: 'get', class: 'navbar-form navbar-right') do %>
+          <%= search_field_tag 'search', nil, class: 'form-control', placeholder: 'Search'  %>
+          <%= submit_tag "Submit", class: 'btn btn-default', :name => nil %>
+        <% end %>
+      </li>
+    <% end %>
+  <%= yield %>
+</body>
+
+</html>

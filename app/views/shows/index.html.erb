@@ -1,0 +1,8 @@
+<h1>Search for A Show</h1>
+
+
+<h1>All Shows </h1>
+<% @shows.each do |show| %>
+  <%= render partial: 'show_preview', locals: { show: show } %>
+  <a href="/shows/<%= show.id %>"><button>Find Out More</button></a>
+<% end %>

@@ -1,0 +1,33 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  composer: MyString
+  lyricist: MyString
+  librettist: MyString
+  description: MyText
+  cast_size: MyString
+  good_for_elementary_school: false
+  good_for_high_school: false
+  good_for_college: false
+  length: MyString
+  dance_heavy: false
+  music_genre: MyString
+  licensing_company: MyString
+  licensing_link: MyString
+
+two:
+  title: MyString
+  composer: MyString
+  lyricist: MyString
+  librettist: MyString
+  description: MyText
+  cast_size: MyString
+  good_for_elementary_school: false
+  good_for_high_school: false
+  good_for_college: false
+  length: MyString
+  dance_heavy: false
+  music_genre: MyString
+  licensing_company: MyString
+  licensing_link: MyString
