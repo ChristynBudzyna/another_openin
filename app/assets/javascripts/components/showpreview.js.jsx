@@ -1,4 +1,3 @@
-
 var ShowPreview = React.createClass({
   render: function(){
   return( <div className="show-profile-container">
