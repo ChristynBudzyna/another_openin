@@ -1,1 +1,8 @@
-<%= render partial: 'show_profile', locals: { show: @show } %>
+<div class="container">
+  <button class="audio-preview-link" data-show-title="<%=@show.title%>">sample the cast recording</button>
+  <button id="play-button" class="button">play</button>
+  <button id="pause-button" class="button">pause</button>
+  <button id="next-button" class="button">next</button>
+</div>
+
+<%= react_component('Show') %>

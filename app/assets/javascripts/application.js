@@ -12,6 +12,43 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require turbolinks
+//= require react
+//= require react_ujs
+//= require components
 //= require_tree .
 //= require bootstrap-sprockets
+
+$(window).load(function() {
+  $(".audio-preview-link").click(function(e){
+    e.preventDefault();
+    $("#play-button").show();
+    $("#pause-button").show();
+    $("#next-button").show();
+    var album_name = $(this).data().showTitle
+    $.getJSON("https://api.spotify.com/v1/search", {type: "album", q: album_name }).done(function(response) {
+      $.getJSON(response.albums.items[0].href).done(function(response2) {
+        var audioObject = new Audio(response2.tracks.items[0].preview_url);
+        $("#play-button").click(function(e){
+          e.preventDefault();
+          audioObject.play();
+        });
+        $("#pause-button").click(function(e){
+          e.preventDefault();
+          audioObject.pause();
+        });
+        var currentTrack = 0
+        $("#next-button").click(function(e){
+          e.preventDefault();
+          audioObject.pause();
+          currentTrack += 1
+          audioObject = new Audio(response2.tracks.items[currentTrack].preview_url);
+          audioObject.play();
+        });
+      })
+    })
+  })
+
+  var nextTrack = function(audioObject) {
+    audioObject = new Audio(response2.tracks.items[i].preview_url);
+  }
+});

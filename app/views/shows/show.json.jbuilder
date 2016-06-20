@@ -1,0 +1,1 @@
+json.extract! @show, :id, :title, :composer, :lyricist, :librettist, :description, :cast_size, :good_for_elementary_school, :good_for_high_school, :good_for_college, :length, :dance_heavy, :music_genre, :licensing_company, :licensing_link, :created_at, :updated_at
