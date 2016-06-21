@@ -13,12 +13,6 @@
       <li>welcome, <%= link_to current_user.username, user_path(current_user) %></li>
       <li><%= link_to 'log out', logout_path, method: "delete" %></li>
       <li><%= link_to 'find a show', shows_path %></li>
-      <li>
-        <%= form_tag(searches_path, method: 'get', class: 'navbar-form navbar-right') do %>
-          <%= search_field_tag 'search', nil, class: 'form-control', placeholder: 'Search by Show Name'  %>
-          <%= submit_tag "Submit", class: 'btn btn-default', :name => nil %>
-        <% end %>
-      </li>
     </ul>
     <% else %>
       <li><%= link_to 'sign up', new_user_path %></li>

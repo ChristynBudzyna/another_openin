@@ -3,10 +3,10 @@
 
   <h2>Your Favorites </h2>
   <% if @user_favorites.length == 0 %>
-    <p>You haven't favorited anything yet! Check out the Show Search to add your favorites</p>
+    <p>You haven't favorited anything yet! Check out the <%= link_to "Show Search", shows_path %> to add your favorites</p>
   <% else %>
     <% @user_favorites.each do |show| %>
-      <%= render partial: '/shows/show_preview', locals: { show: show } %>
+     <%= react_component 'ShowPreview', { data: show } %>
       <a href="/shows/<%= show.id %>"><button>Find Out More</button></a>
     <% end %>
   <% end %>
