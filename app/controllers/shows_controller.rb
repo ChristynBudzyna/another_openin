@@ -15,8 +15,7 @@ def search
   music_genre = params[:music_genre]
 
  @search_results = Show.where(cast_size: cast_size, length: length, show_type: show_type, music_genre: music_genre)
- binding.pry
-  render :template => 'shows/index'
+  render :template => 'shows/results'
 end
 
 end

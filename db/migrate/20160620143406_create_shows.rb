@@ -8,9 +8,7 @@ class CreateShows < ActiveRecord::Migration
       t.text :description
       t.string :cast_size
       t.string :show_type
-      t.boolean :good_for_elementary_school
-      t.boolean :good_for_high_school
-      t.boolean :good_for_college
+      t.string :age_of_actors
       t.string :length
       t.boolean :dance_heavy
       t.string :music_genre

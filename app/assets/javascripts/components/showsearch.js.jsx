@@ -32,17 +32,13 @@ var ShowSearch = React.createClass({
 
  <h2>age of actors</h2>
  <fieldset>
-    <input type="checkbox" name="good_for_elementary_school" value="true"/>
-      good for elementary schools
-    <input type="checkbox" name="good_for_high_school" value="true"/>
-      good for high schools
-     <input type="checkbox" name="good_for_college" value="true"/>
-     good for college
-     <input type="checkbox" name="not_necessary" value="false"/>
-     not necessary
+    <input type="radio" name="age_of_actors" value="children"/>
+      children
+    <input type="radio" name="age_of_actors" value="adults"/>
+      adults
   </fieldset>
 
- <h2>preferred musical genre</h2>
+ <h2>musical genre</h2>
   <fieldset>
     <input type="radio" name="music_genre" value="classic musical theatre"/>
       classic musical theatre
@@ -66,7 +62,7 @@ var ShowSearch = React.createClass({
     no
   </fieldset>
 
-   <input type="submit" value="find my next show" class="button"/>
+   <input type="submit" value="find my next show" className="button"/>
       </form>
       )
   }

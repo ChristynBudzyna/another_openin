@@ -1,14 +1,8 @@
-<h1>Search for A Show</h1>
 
-<%= react_component('ShowSearch') %>
+<button id="search-button">Search For A Show</button>
+<div class="search-container">
+  <%= react_component('ShowSearch') %>
+</div>
+<h1>Browse All Shows</h1>
 
-<% if @search_results %>
-  <% @search_results.each do |show| %>
-  <p><%= show.title %></p>
-  <p><%= show.composer %></p>
-  <p><%= show.lyricist %></p>
-  <p><%= show.librettist %></p>
-  <% end %>
-<% else %>
 <%= react_component('ShowList') %>
-<% end %>
