@@ -2,4 +2,13 @@
 
 <%= react_component('ShowSearch') %>
 
+<% if @search_results %>
+  <% @search_results.each do |show| %>
+  <p><%= show.title %></p>
+  <p><%= show.composer %></p>
+  <p><%= show.lyricist %></p>
+  <p><%= show.librettist %></p>
+  <% end %>
+<% else %>
 <%= react_component('ShowList') %>
+<% end %>

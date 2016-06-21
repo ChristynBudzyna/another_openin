@@ -1,7 +1,7 @@
 var ShowSearch = React.createClass({
   render:function() {
     return (
-      <form action="shows/search" method="get">
+      <form action="/shows/search" method="get">
        <h2>preferred cast size</h2>
   <fieldset>
     <input type="radio" name="cast_size" value="small" />
@@ -16,7 +16,7 @@ var ShowSearch = React.createClass({
   <fieldset>
     <input type="radio" name="length" value="full length"/>
       full length
-    <input type="radio" name="length" value="one act"/>
+    <input type="radio" name="length" value="one-act"/>
       one act
     <input type="radio" name="length" value="ten minute"/>
       ten minute
@@ -44,9 +44,9 @@ var ShowSearch = React.createClass({
 
  <h2>preferred musical genre</h2>
   <fieldset>
-    <input type="radio" name="music_genre" value="classic mt"/>
+    <input type="radio" name="music_genre" value="classic musical theatre"/>
       classic musical theatre
-    <input type="radio" name="music_genre" value="contemporary mt"/>
+    <input type="radio" name="music_genre" value="contemporary musical theatre"/>
       contemporary musical theatre
     <input type="radio" name="music_genre" value="pop/rock"/>
       pop/rock

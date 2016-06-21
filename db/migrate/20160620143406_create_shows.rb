@@ -7,6 +7,7 @@ class CreateShows < ActiveRecord::Migration
       t.string :librettist
       t.text :description
       t.string :cast_size
+      t.string :show_type
       t.boolean :good_for_elementary_school
       t.boolean :good_for_high_school
       t.boolean :good_for_college
