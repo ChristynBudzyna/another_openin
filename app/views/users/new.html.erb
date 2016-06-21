@@ -1,24 +1,25 @@
-
-<div class="container">
-  <%= form_for @user do |f| %>
-    <% if @user.errors.any? %>
-      <p><%=pluralize(@user.errors.count, "error") %> prevented this post from saving.</p>
-      <ul>
-        <% @user.errors.full_messages.each do |message| %>
-          <li><%= message %></li>
-        <% end %>
-      </ul>
-    <%end%>
-    <p>
-      <%=f.label :username %><br>
-      <%=f.text_field :username %>
-    </p>
-    <p>
-      <%=f.label :password %><br>
-      <%=f.password_field :password %>
-    </p>
-     <p>
-      <%=f.submit %>
-    </p>
-  <% end %>
-</div>
+<main>
+  <div class="container">
+    <h2>Sign Up</h2>
+    <hr>
+    <%= bootstrap_form_for @user do |f| %>
+      <% if @user.errors.any? %>
+        <p><%=pluralize(@user.errors.count, "error") %> prevented this post from saving.</p>
+        <ul>
+          <% @user.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+        </ul>
+      <%end%>
+      <p>
+        <%=f.text_field :username %>
+      </p>
+      <p>
+        <%=f.password_field :password %>
+      </p>
+       <p>
+        <%=f.submit "sign up" %>
+      </p>
+    <% end %>
+  </div>
+</main>

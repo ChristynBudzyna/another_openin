@@ -6,7 +6,7 @@
   <%= javascript_include_tag 'application' %>
   <%= csrf_meta_tags %>
   <link href='https://fonts.googleapis.com/css?family=Fjalla+One' rel='stylesheet' type='text/css'>
-  <link href='https://fonts.googleapis.com/css?family=Average' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
 </head>
 <body>
   <nav class="navbar navbar-default navbar-fixed-top">
@@ -20,7 +20,7 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="#">ANOTHER OPENIN'</a>
+        <a class="navbar-brand" href="/">ANOTHER OPENIN'</a>
       </div>
 
       <!-- Collect the nav links, forms, and other content for toggling -->
@@ -31,7 +31,7 @@
         <ul class="nav navbar-nav navbar-right">
           <% if logged_in? %>
             <li><%= link_to 'Home', root_path %></li>
-            <li><%= link_to 'Find a Show', shows_path %></li>
+            <li><%= link_to 'Explore Shows', shows_path %></li>
             <li><%= link_to "My Profile", user_path(current_user) %></li>
             <li><%= link_to 'Log Out', logout_path, method: "delete" %></li>
           <% else %>
@@ -46,6 +46,19 @@
   </div>
 </nav>
   <%= yield %>
+
+<footer class="footer">
+  <div class="container">
+   <p class="navbar-text pull-left">
+    ANOTHER OPENIN' - A web app that connects theatre companies to musicals they want to produce</p>
+      <p class="navbar-text pull-right">
+        2016 Another Openin' |
+        <a href="https://github.com/ChristynBudzyna/another_openin">
+       Source Code</a>
+      </p>
+    </div>
+   </footer>
+
 </body>
 
 </html>
