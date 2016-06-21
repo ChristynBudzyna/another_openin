@@ -16,19 +16,54 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+
 .jumbotron {
   height: 600px;
 }
 
-#test
-{
- background: url('/assets/theater.jpg') no-repeat center center;
- background-size: cover;
+#test {
+  background: url('/assets/seats.jpg') no-repeat center center;
+  background-size: cover;
+}
+
+#homepage-content-panel {
+  width: 50%;
+  background: rgba(255,255,255,0.2)!important;
+  border-color: black;
+}
+
+#song-lyric {
+  text-align: center;
+  color: black;
+  font-size: 1em;
+  padding-bottom: 3%;
+}
+
+#piano-text-holder {
+  padding-top: 20%;
+}
+
+#homepage-piano {
+  background: url('/assets/piano.jpg')
+  no-repeat center center;
+  background-size: cover;
+  height: 600px;
+  text-align: center;
 }
 
 #home-h1 {
+  padding-top: 10%;
+  font-family: 'Fjalla One', sans-serif;
   text-align: center;
   color: white;
+  font-size: 8em;
+}
+
+#tagline {
+  font-family: 'Fjalla One', sans-serif;
+  text-align: center;
+  color: white;
+  font-size: 2em;
 }
 
 #play-button {
@@ -48,5 +83,22 @@
 }
 
 .visibility {
-    display: unset;
+  display: unset;
+}
+
+body {
+  padding-top: 70px;
+  font-family: "Fjalla One";
+}
+
+h1 h2 h3 h4 {
+  font-family: "Fjalla One";
+}
+
+#main-button-left {
+  display:inline-block;
+}
+
+#main-button-right {
+  display:inline-block;
 }
