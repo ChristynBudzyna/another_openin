@@ -31,6 +31,7 @@ gem 'bcrypt'
 gem 'bootstrap-sass', '~> 3.3.6'
 gem 'sass-rails', '>= 3.2'
 gem 'react-rails'
+gem 'kaminari'
 # Use Unicorn as the app server
 # gem 'unicorn'
 

@@ -166,13 +166,16 @@ main {
 
 .show-panel {
   text: align-left;
-  width: 50%;
 }
 
 .show-panel-headings{
   font-family: "Fjalla One";
   font-size: 1.5em;
   text-align: left;
+}
+
+.show-search-header {
+  text-align: center;
 }
 
 .show-panel-headings a {

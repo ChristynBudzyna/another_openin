@@ -13,11 +13,11 @@ var ShowSearch = React.createClass({
 
  <h2>preferred show length</h2>
   <fieldset>
-    <label className="radio-inline"><input type="radio" name="length" value="full length"/>
+    <label className="radio-inline"><input type="radio" name="length" value="full-length"/>
       full length</label>
     <label className="radio-inline"><input type="radio" name="length" value="one-act"/>
       one act</label>
-   <label className="radio-inline"><input type="radio" name="length" value="ten minute"/>
+   <label className="radio-inline"><input type="radio" name="length" value="ten-minute"/>
       ten minute</label>
   </fieldset>
 
