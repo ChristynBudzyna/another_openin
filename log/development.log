@@ -49347,3 +49347,31 @@ Started GET "/assets/seats.jpg" for ::1 at 2016-06-21 18:30:59 -0400
 
 
 Started GET "/assets/piano.jpg" for ::1 at 2016-06-21 18:30:59 -0400
+
+
+Started GET "/" for ::1 at 2016-06-21 19:16:48 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (1.0ms)
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 3]]
+Completed 200 OK in 849ms (Views: 846.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/assets/seats.jpg" for ::1 at 2016-06-21 19:16:49 -0400
+
+
+Started GET "/assets/piano.jpg" for ::1 at 2016-06-21 19:16:49 -0400
+
+
+Started GET "/shows" for ::1 at 2016-06-21 19:16:52 -0400
+Processing by ShowsController#index as HTML
+  Rendered shows/index.html.erb within layouts/application (0.4ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 3]]
+Completed 200 OK in 70ms (Views: 67.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/shows.json" for ::1 at 2016-06-21 19:16:52 -0400
+Processing by ShowsController#index as JSON
+  [1m[35mShow Load (0.8ms)[0m  SELECT "shows".* FROM "shows"
+  Rendered shows/index.json.jbuilder (20.4ms)
+Completed 200 OK in 29ms (Views: 26.6ms | ActiveRecord: 2.0ms)
