@@ -1,9 +1,27 @@
-<%= react_component('Show') %>
+<main>
+  <div class="container">
+    <%= react_component('Show') %>
 
-<%= form_for :favorite, method: :create, url: favorites_path do |f| %>
-  <%= hidden_field_tag "show_id", "#{@show.id}" %>
-  <%= button_tag(type: 'submit') do %>
-  <span class="glyphicon glyphicon-star"/>
+<% if !current_user %>
+  <p><%= link_to "Sign Up", new_user_path %> or <%= link_to "Log In", login_path %> to favorite shows</p>
+<% else%>
+  <% if @show.is_favorite?(current_user) %>
+      <%= form_for :favorite, method: :delete, url: unfavorite_path do |f| %>
+      <%= f.hidden_field :show_id, value: @show.id %>
+      <%= f.submit 'Remove From Favorites', :class => 'btn btn-default red-button btn-large' %>
+      <% end %>
+  <% else %>
+       <%= form_for :favorite, method: :create, url: favorite_path do |f| %>
+          <%= hidden_field_tag "show_id", "#{@show.id}" %>
+          <%= f.submit 'Add To Favorites', :class => 'btn btn-default red-button btn-large' %>
+    <% end %>
   <% end %>
 <% end %>
+
+
+
+
+
+  </div>
+</div>
 

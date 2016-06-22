@@ -9,7 +9,6 @@
       <% else %>
         <% @user_favorites.each do |show| %>
          <%= react_component 'ShowPreview', { data: show } %>
-          <a href="/shows/<%= show.id %>"><button>Find Out More</button></a>
         <% end %>
       <% end %>
     <% else %>
