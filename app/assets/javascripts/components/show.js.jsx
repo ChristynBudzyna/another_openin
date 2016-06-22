@@ -20,10 +20,7 @@ componentWillMount: function(){
           <h1>{show.title}</h1>
           <ul className="show-button-list">
             <li className="button-list-item">
-              <button className="btn btn-default">Add to Favorites</button>
-            </li>
-            <li className="button-list-item">
-              <button className="btn btn-default">Visit {show.licensing_company} for Licensing Information</button>
+              <a href={show.licensing_link}><button className="btn btn-default">Visit {show.licensing_company} for Licensing Information</button></a>
             </li>
             <li className="button-list-item">
               <button className="audio-preview-link btn btn-default" data-show-title={show.title}>Listen To Music From the Show</button>
