@@ -1,14 +1,18 @@
-<%= form_for :sessions do |f| %>
-  <p>
-    <%=f.label :username %><br>
-    <%=f.text_field :username %>
-  </p>
-  <p>
-    <%=f.label :password %><br>
-    <%=f.password_field :password %>
-  </p>
+<main>
+  <div class="container">
+    <h2>Login</h2>
+    <hr>
+    <%= bootstrap_form_for :sessions do |f| %>
+      <p>
+        <%=f.text_field :username %>
+      </p>
+      <p>
+        <%=f.password_field :password %>
+      </p>
 
-   <p>
-    <%=f.submit "login" %>
-  </p>
-<% end %>
+       <p>
+        <%=f.submit "login" %>
+      </p>
+    <% end %>
+  </div>
+</main>

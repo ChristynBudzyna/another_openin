@@ -33,16 +33,15 @@ ActiveRecord::Schema.define(version: 20160620143439) do
     t.string   "librettist"
     t.text     "description"
     t.string   "cast_size"
-    t.boolean  "good_for_elementary_school"
-    t.boolean  "good_for_high_school"
-    t.boolean  "good_for_college"
+    t.string   "show_type"
+    t.string   "age_of_actors"
     t.string   "length"
     t.boolean  "dance_heavy"
     t.string   "music_genre"
     t.string   "licensing_company"
     t.string   "licensing_link"
-    t.datetime "created_at",                 null: false
-    t.datetime "updated_at",                 null: false
+    t.datetime "created_at",        null: false
+    t.datetime "updated_at",        null: false
   end
 
   create_table "users", force: :cascade do |t|

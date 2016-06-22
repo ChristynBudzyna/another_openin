@@ -15,20 +15,67 @@
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
+/*
+ *= require rails_bootstrap_forms
+ */
 
 .jumbotron {
   height: 600px;
 }
 
-#test
-{
- background: url('/assets/theater.jpg') no-repeat center center;
- background-size: cover;
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+#test {
+  background: url('/assets/seats.jpg') no-repeat center center;
+  background-size: cover;
+}
+
+#homepage-content-panel {
+  width: 50%;
+  background: rgba(255,255,255,0.2)!important;
+  border-color: black;
+}
+
+#song-lyric {
+  text-align: center;
+  color: black;
+  font-size: 1em;
+  padding-bottom: 3%;
+}
+
+#piano-text-holder {
+  padding-top: 20%;
+}
+
+#logo {
+  width: 30px;
+  margin-bottom: -10px;
+}
+
+#homepage-piano {
+  background: url('/assets/piano.jpg')
+  no-repeat center center;
+  background-size: cover;
+  height: 600px;
+  text-align: center;
 }
 
 #home-h1 {
+  padding-top: 10%;
+  font-family: 'Fjalla One', sans-serif;
   text-align: center;
   color: white;
+  font-size: 8em;
+}
+
+#tagline {
+  font-family: 'Fjalla One', sans-serif;
+  text-align: center;
+  color: white;
+  font-size: 2em;
 }
 
 #play-button {
@@ -41,4 +88,116 @@
 
 #next-button {
   display: none;
+}
+
+.search-container {
+  display:none;
+}
+
+.visibility {
+  display: unset;
+}
+
+.navbar-default {
+  background-color: #a20907;
+  border:none
+}
+
+.navbar-default .navbar-nav > li > a {
+   color: white;
+    }
+
+.navbar-default .navbar-brand {
+  color: white;
+}
+
+nav {
+  font-family: "Fjalla One";
+}
+
+.panel-default > .main-page-panels {
+  background-color: #d3d3d3;
+  text-align: center;
+}
+
+button {
+  font-family: "Fjalla One";
+}
+
+body {
+  font-family: "Roboto";
+  margin-bottom: 60px;
+}
+
+h1, h2, h3, h4 {
+  font-family: "Fjalla One";
+}
+
+#main-button-left {
+  display:inline-block;
+  margin-right: 5%;
+  width: 300px;
+  padding: 2%;
+  font-size: 1.5em;
+  opacity: 0.8;
+}
+
+#main-button-right {
+  display:inline-block;
+  padding: 2%;
+  width: 300px;
+  font-size: 1.5em;
+  opacity: 0.8;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 60px;
+  background-color: #f5f5f5;
+  font-size: .8em;
+}
+
+main {
+  margin-top: 70px;
+  margin-bottom: 70px;
+}
+
+.show-panel {
+  text: align-left;
+}
+
+.show-panel-headings{
+  font-family: "Fjalla One";
+  font-size: 1.5em;
+  text-align: left;
+}
+
+.show-search-header {
+  text-align: center;
+}
+
+.show-panel-headings a {
+  text-decoration: none;
+  color: white;
+}
+
+.panel-default > .show-panel-headings {
+  background-color: #a20907;
+  }
+
+li {
+  text-decoration: none;
+}
+
+.glow-button {
+ text-decoration: none;
+ color: black;
+ background: yellow;
+ padding: 15px 40px;
+ border-radius: 4px;
+ font-weight: normal;
+ text-transform: uppercase;
+ transition: all 0.2s ease-in-out;
 }

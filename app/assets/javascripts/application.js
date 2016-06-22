@@ -51,4 +51,9 @@ $(window).load(function() {
   var nextTrack = function(audioObject) {
     audioObject = new Audio(response2.tracks.items[i].preview_url);
   }
+
+  $("#search-button").click(function(e){
+    e.preventDefault();
+    $(".search-container").toggleClass('visibility');
+  })
 });
