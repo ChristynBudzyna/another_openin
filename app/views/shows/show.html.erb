@@ -1,9 +1,12 @@
-<%= react_component('Show') %>
-
-<%= form_for :favorite, method: :create, url: favorites_path do |f| %>
-  <%= hidden_field_tag "show_id", "#{@show.id}" %>
-  <%= button_tag(type: 'submit') do %>
-  <span class="glyphicon glyphicon-star"/>
-  <% end %>
-<% end %>
+<main>
+  <div class="container">
+    <%= react_component('Show') %>
+    <%= form_for :favorite, method: :create, url: favorites_path do |f| %>
+      <%= hidden_field_tag "show_id", "#{@show.id}" %>
+      <%= button_tag(type: 'submit') do %>
+      <span class="glyphicon glyphicon-star"/>
+      <% end %>
+    <% end %>
+  </div>
+</div>
 

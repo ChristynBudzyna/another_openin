@@ -1,8 +1,8 @@
 var ShowSearch = React.createClass({
   render:function() {
     return (
-      <form action="/shows/search" method="get">
-       <h2>preferred cast size</h2>
+      <form action="/searches" method="get">
+       <h3>preferred cast size</h3>
   <fieldset>
     <label className="radio-inline" value="small"><input type="radio" name="cast_size" value="small" />small</label>
     <label className="radio-inline"><input type="radio" name="cast_size" value="medium" />
@@ -11,7 +11,8 @@ var ShowSearch = React.createClass({
       large</label>
   </fieldset>
 
- <h2>preferred show length</h2>
+ <h3>preferred show length</h3
+>
   <fieldset>
     <label className="radio-inline"><input type="radio" name="length" value="full-length"/>
       full length</label>
@@ -21,7 +22,8 @@ var ShowSearch = React.createClass({
       ten minute</label>
   </fieldset>
 
- <h2>book musical or revue?</h2>
+ <h3>book musical or revue?</h3
+>
  <fieldset>
     <label className="radio-inline"><input type="radio" name="show_type" value="book musical"/>
       book musical</label>
@@ -29,7 +31,7 @@ var ShowSearch = React.createClass({
       revue</label>
   </fieldset>
 
- <h2>age of actors</h2>
+ <h3>age of actors</h3>
  <fieldset>
     <label className="radio-inline"><input type="radio" name="age_of_actors" value="children"/>
       children</label>
@@ -37,7 +39,7 @@ var ShowSearch = React.createClass({
       adults</label>
   </fieldset>
 
- <h2>musical genre</h2>
+ <h3>musical genre</h3>
   <fieldset>
     <label className="radio-inline"><input type="radio" name="music_genre" value="classic musical theatre"/>
       classic musical theatre</label>
@@ -54,15 +56,15 @@ var ShowSearch = React.createClass({
       other</label>
   </fieldset>
 
-   <h2>dance heavy?</h2>
+   <h3>dance heavy?</h3>
   <fieldset>
    <label className="radio-inline"><input type="radio" name="dance_heavy" value="true"/>
       yes</label>
     <label className="radio-inline"><input type="radio" name="dance_heavy" value="false"/>
     no</label>
   </fieldset>
-
-   <input type="submit" value="find my next show" className="btn btn-default"/>
+  <br/>
+   <input type="submit" value="search" className="btn btn-default"/>
       </form>
       )
   }

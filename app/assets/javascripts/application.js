@@ -24,8 +24,13 @@ $(window).load(function() {
     $("#play-button").show();
     $("#pause-button").show();
     $("#next-button").show();
-    var album_name = $(this).data().showTitle
+    var album_name = ($(this).data().showTitle)+" the musical"
     $.getJSON("https://api.spotify.com/v1/search", {type: "album", q: album_name }).done(function(response) {
+      debugger;
+      if(response.albums.items.length == 0) {
+        $("#error-message").show()
+      }
+      else {
       $.getJSON(response.albums.items[0].href).done(function(response2) {
         var audioObject = new Audio(response2.tracks.items[0].preview_url);
         $("#play-button").click(function(e){
@@ -45,6 +50,7 @@ $(window).load(function() {
           audioObject.play();
         });
       })
+    }
     })
   })
 

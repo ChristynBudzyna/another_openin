@@ -1,1 +1,1 @@
-json.extract! @show, :id, :title, :composer, :lyricist, :librettist, :description, :cast_size, :age_of_actors, :length, :dance_heavy, :music_genre, :licensing_company, :licensing_link, :created_at, :updated_at
+json.extract! @show, :id, :title, :composer, :lyricist, :librettist, :description, :cast_size, :age_of_actors, :length, :dance_heavy, :music_genre, :licensing_company, :licensing_link, :show_type, :created_at, :updated_at

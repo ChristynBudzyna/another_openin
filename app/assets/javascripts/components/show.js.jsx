@@ -15,17 +15,40 @@ componentWillMount: function(){
       return(
       <div className="show-container">
         <div className="show-details">
-          <p>{show.title}</p>
-          <p>Composer: {show.composer}</p>
-          <p>Lyricist: {show.lyricist}</p>
-          <p>Librettist: {show.librettist}</p>
-          <p>Description: {show.description}</p>
+          <div className="panel panel-default">
+          <div className="panel-body">
+          <h1>{show.title}</h1>
+          <ul className="show-button-list">
+            <li className="button-list-item">
+              <button className="btn btn-default">Add to Favorites</button>
+            </li>
+            <li className="button-list-item">
+              <button className="btn btn-default">Visit {show.licensing_company} for Licensing Information</button>
+            </li>
+            <li className="button-list-item">
+              <button className="audio-preview-link btn btn-default" data-show-title={show.title}>Listen To Music From the Show</button>
+              <button id="play-button" className="btn btn-default">play</button>
+              <button id="pause-button" className="btn btn-default">pause</button>
+              <button id="next-button" className="btn btn-default">next</button>
+            </li>
+          </ul>
+          <p id="error-message">Sorry, Spotify does not have music for this show.</p>
+          <hr/>
+
+            <p>Composer: {show.composer} |
+             Lyricist: {show.lyricist} |
+             Librettist: {show.librettist}</p>
+          <p> {show.description}</p>
+
         </div>
-        <div>
-        <button className="audio-preview-link" data-show-title={show.title}>sample the cast recording</button>
-        <button id="play-button" className="button">play</button>
-        <button id="pause-button" className="button">pause</button>
-        <button id="next-button" className="button">next</button>
+        <ul className="tags">
+          <li className="tag"> {show.length}</li>
+          <li className="tag">{show.show_type}</li>
+          <li className="tag">{show.cast_size} cast</li>
+          <li className="tag">{show.age_of_actors}</li>
+        </ul>
+
+        </div>
         </div>
       </div>
       )

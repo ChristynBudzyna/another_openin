@@ -1,0 +1,13 @@
+<main>
+  <div class="container">
+  <h1>Your Search Results</h1>
+  <hr>
+    <% if @search_results == [] %>
+      <h2>Sorry, there were no results for that search</h2>
+    <% else %>
+      <% @search_results.each do |show| %>
+          <%= react_component 'ShowPreview', { data: show } %>
+        <% end %>
+    <% end %>
+  </div>
+</main>

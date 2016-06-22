@@ -10,7 +10,7 @@ var ShowPreview = React.createClass({
                 <ul className="tags">
                   <li className="tag"> {this.props.data.length}</li>
                   <li className="tag">{this.props.data.show_type}</li>
-                  <li className="tag">{this.props.data.cast_size}</li>
+                  <li className="tag">{this.props.data.cast_size} cast</li>
                   <li className="tag">{this.props.data.age_of_actors}</li>
                 </ul>
                 <a href={"/shows/" + this.props.data.id}><button className="btn btn-default">Learn More</button></a>
