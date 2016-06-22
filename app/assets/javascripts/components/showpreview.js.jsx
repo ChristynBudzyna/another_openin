@@ -7,7 +7,13 @@ var ShowPreview = React.createClass({
               </div>
               <div className="panel-body">
               <p>{this.props.data.description}</p>
-              <a href={"/shows/" + this.props.data.id}><button className="btn btn-default">Learn More</button></a>
+                <ul className="tags">
+                  <li className="tag"> {this.props.data.length}</li>
+                  <li className="tag">{this.props.data.show_type}</li>
+                  <li className="tag">{this.props.data.cast_size}</li>
+                  <li className="tag">{this.props.data.age_of_actors}</li>
+                </ul>
+                <a href={"/shows/" + this.props.data.id}><button className="btn btn-default">Learn More</button></a>
               </div>
             </div>
           </div>)
