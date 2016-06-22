@@ -4,7 +4,7 @@ getInitialState: function(){
 },
 componentWillMount: function(){
   $.ajax({
-    url:'http://localhost:3000/shows.json',
+    url:'https://anotheropenin.herokuapp.com/shows.json',
     dataType: 'json'
   }).done(function(response){
     console.log(response);
