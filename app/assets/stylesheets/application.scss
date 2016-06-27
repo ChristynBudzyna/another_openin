@@ -19,48 +19,62 @@
  *= require rails_bootstrap_forms
  */
 
-.jumbotron {
-  height: 600px;
-}
+/* General & Layout Styling */
 
 html {
   position: relative;
   min-height: 100%;
 }
 
-#test {
+.navbar-default {
+  background-color: #a20907;
+  border:none
+}
+
+.navbar-default .navbar-nav > li > a {
+   color: white;
+}
+
+.navbar-default .navbar-brand {
+  color: white;
+}
+
+nav {
+  font-family: "Fjalla One";
+}
+
+body {
+  font-family: "Roboto";
+  margin-bottom: 60px;
+}
+
+main {
+  margin-top: 70px;
+  margin-bottom: 70px;
+}
+
+h1, h2, h3, h4 {
+  font-family: "Fjalla One";
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 60px;
+  background-color: #f5f5f5;
+  font-size: .8em;
+}
+
+/* Homepage Styling  */
+
+.jumbotron {
+  height: 600px;
+}
+
+#jumbotron-picture {
   background: url('/assets/seats.jpg') no-repeat center center;
   background-size: cover;
-}
-
-#homepage-content-panel {
-  width: 50%;
-  background: rgba(255,255,255,0.2)!important;
-  border-color: black;
-}
-
-#song-lyric {
-  text-align: center;
-  color: black;
-  font-size: 1em;
-  padding-bottom: 3%;
-}
-
-#piano-text-holder {
-  padding-top: 20%;
-}
-
-#logo {
-  width: 30px;
-  margin-bottom: -10px;
-}
-
-#homepage-piano {
-  background: url('/assets/piano.jpg')
-  no-repeat center center;
-  background-size: cover;
-  height: 600px;
-  text-align: center;
 }
 
 #home-h1 {
@@ -78,55 +92,16 @@ html {
   font-size: 2em;
 }
 
-#play-button {
-  display: none;
-}
-
-#pause-button {
-  display: none;
-}
-
-#next-button {
-  display: none;
-}
-
-.visibility {
-  display: unset;
-}
-
-.navbar-default {
-  background-color: #a20907;
-  border:none
-}
-
-.navbar-default .navbar-nav > li > a {
-   color: white;
-    }
-
-.navbar-default .navbar-brand {
-  color: white;
-}
-
-nav {
-  font-family: "Fjalla One";
-}
-
-.panel-default > .main-page-panels {
-  background-color: #d3d3d3;
+#homepage-piano {
+  background: url('/assets/piano.jpg')
+  no-repeat center center;
+  background-size: cover;
+  height: 600px;
   text-align: center;
 }
 
-button {
-  font-family: "Fjalla One";
-}
-
-body {
-  font-family: "Roboto";
-  margin-bottom: 60px;
-}
-
-h1, h2, h3, h4 {
-  font-family: "Fjalla One";
+#piano-text-holder {
+  padding-top: 20%;
 }
 
 #main-button-left {
@@ -146,74 +121,11 @@ h1, h2, h3, h4 {
   opacity: 0.8;
 }
 
-.footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 60px;
-  background-color: #f5f5f5;
-  font-size: .8em;
-}
+/* Show Index Page Styling  */
 
-main {
-  margin-top: 70px;
-  margin-bottom: 70px;
-}
-
-.show-panel {
-  text: align-left;
-}
-
-.show-panel-headings{
-  font-family: "Fjalla One";
-  font-size: 1.5em;
-  text-align: left;
-}
-
-.show-search-header {
+.panel-default > .main-page-panels {
+  background-color: #d3d3d3;
   text-align: center;
-}
-
-.show-panel-headings a {
-  text-decoration: none;
-  color: white;
-}
-
-.panel-default > .show-panel-headings {
-  background: -webkit-linear-gradient(left, #170201 , #fee7e6);
-  background: -o-linear-gradient(right, #170201, #fee7e6);
-  background: -moz-linear-gradient(right, #170201, #fee7e6);
-  background: linear-gradient(to right, #170201 , #fee7e6);
-  }
-
-ul {
-  list-style-type: none;
-}
-
-.show-button-list {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-
-#error-message {
-  display:none;
-}
-
-.button-list-item {
-  display: inline;
-  padding: 1% 1% 1% 0;
-}
-
-.glow-button {
- text-decoration: none;
- color: white;
- background: #fa8784 ;
- padding: 15px 40px;
- border-radius: 4px;
- font-weight: normal;
- text-transform: uppercase;
- transition: all 0.2s ease-in-out;
 }
 
 .tags {
@@ -273,11 +185,72 @@ ul {
    border-left-color: #a20907;
 }
 
-.search-container {
+.show-panel {
+  text: align-left;
+}
+
+.show-panel-headings{
+  font-family: "Fjalla One";
+  font-size: 1.5em;
+  text-align: left;
+}
+
+.show-search-header {
   text-align: center;
+}
+
+.show-panel-headings a {
+  text-decoration: none;
+  color: white;
+}
+
+.panel-default > .show-panel-headings {
+  background: -webkit-linear-gradient(left, #170201 , #fee7e6);
+  background: -o-linear-gradient(right, #170201, #fee7e6);
+  background: -moz-linear-gradient(right, #170201, #fee7e6);
+  background: linear-gradient(to right, #170201 , #fee7e6);
+  }
+
+/* Show Show Page Styling  */
+
+#play-button {
+  display: none;
+}
+
+#pause-button {
+  display: none;
+}
+
+#next-button {
+  display: none;
+}
+
+.visibility {
+  display: unset;
 }
 
 .red-button {
   background-color: #a20907;
   color: white
+}
+
+.show-button-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+#error-message {
+  display:none;
+}
+
+.button-list-item {
+  display: inline;
+  padding: 1% 1% 1% 0;
+}
+
+/* Show Search Page Styling  */
+
+.search-container {
+  text-align: center;
 }
