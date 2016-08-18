@@ -50,7 +50,7 @@ $(window).load(function() {
           audioObject.play();
         });
       })
-    }
+     }
     })
   })
 
